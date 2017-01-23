@@ -1,0 +1,162 @@
+html, body {
+    line-height: 1.5rem;
+    font-family: 'Muli', sans-serif;
+    font-size: 1rem;
+    margin:0;
+    padding:0;
+    color: rgb(35,35,35);
+}
+
+img {
+    max-width: 100%
+}
+
+h2 {
+    padding-top: 0;
+    font-size: 1.88rem;
+}
+
+b, em {
+    color: rgb(0,95,200);
+    font-style: normal;
+}
+
+.maxWidth {
+    margin: auto;
+    max-width: 77.69rem;
+    clear: left;
+}
+
+.sehtrand {
+   margin: 0 2rem 0 2rem; 
+}
+
+.sehtButton {
+    /* 
+    background: #0074d9;
+    color: #fff;
+    */
+    height: 2.19rem;
+    line-height: 1.8rem;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 0 .9rem;
+    vertical-align: middle;
+    color: rgb(35,35,35);
+    border: 0;
+    width: auto;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 0;
+    box-shadow: 0 0 transparent inset;
+    text-decoration: none;
+    background: transparent;
+}
+
+
+.grau {
+    background: rgb(188,188,188);
+    color: white;
+}
+
+.blau {
+    background: rgb(0,95,200);
+    color: white;
+}
+
+.sehtHeight {
+    /*
+    height: 35px;
+    */
+    height: 2.47rem;
+}
+
+
+
+.circle {
+    border-radius: 50%;
+    width: 2.6rem;
+    height: 2.6rem;
+    color: rgb(0,116,217);
+    line-height: 2.3rem; /* positioniert im Kreis*/
+    background: white;
+    float: right;
+    margin: 0.4rem;
+    border: 0.15rem solid rgb(0,116,217);
+}
+
+
+.bigFont {
+    font-size: 3em;
+}
+
+
+.card {
+    margin: 1.05rem;
+    float: left;
+    border-color: rgb(188,188,188);
+    border-style: solid;
+    border-width: thin;
+}
+
+.card > img {
+    width: 30%;
+    float: left;
+    margin: 0.6rem;
+}
+
+.card > p {
+    margin: 0 0.6rem;
+}
+
+.cardTitle {
+    padding: 1rem;
+    text-align: right;
+    line-height: 1.2rem;
+}
+    
+.sehtRechts {
+    margin-top: 2.45rem;
+}
+
+.sehtLinks {
+    margin-top: 2.45rem;
+}
+
+
+/* mobile || small */
+@media screen and (max-width: 50rem) {
+    .desktop {
+        display: none;
+    }
+}
+
+
+/* desktop || large */
+@media screen and (min-width: 50rem) {
+    .mobile {
+        display: none;
+    }
+
+    .sehtRechts {
+        float: right;
+        width: 12rem;
+    }
+
+    .sehtLinks {
+        float: left;
+        width: calc(100% - 14rem);
+        margin-bottom: 3rem;
+    }
+
+    .footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .card {
+        width: calc(50% - 3.4rem);
+    }
+}

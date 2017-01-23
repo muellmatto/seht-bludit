@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created using Karbon, part of Calligra: http://www.calligra.org/karbon -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39.2pt" height="39.2pt">
+<defs/>
+<g id="Welcome">
+  <g id="Desktop-HD" transform="translate(-1.6009, -2.4769)" fill="none">
+   <g id="Lese" transform="" fill="none">
+    <path id="Stroke-3" transform="matrix(-1 0 0 1 50.078 3)" fill="none" stroke="#005fc8" stroke-width="1.00000000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2.00000000000" d="M23.539 47.078C36.539 47.078 47.078 36.539 47.078 23.539C47.078 10.538 36.539 0 23.539 0C10.539 0 0 10.538 0 23.539C0 36.539 10.539 47.078 23.539 47.078Z"/>
+    <path id="Fill-8" transform="matrix(-1 0 0 1 39.834 17.7631)" fill="#005fc8" fill-rule="evenodd" d="M4.184 19.112L5.946 19.112L5.946 7.77L10.13 7.77L10.13 6.118L0 6.118L0 7.77L4.184 7.77ZM14.963 19.112L17.555 19.112L17.555 2.429L23.709 2.429L23.709 0L8.808 0L8.808 2.429L14.963 2.429Z"/>
+   </g>
+  </g>
+ </g>
+</svg>
