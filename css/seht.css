@@ -142,6 +142,7 @@ b, em {
     .sehtRechts {
         float: right;
         width: 12rem;
+        margin-bottom: 3rem;
     }
 
     .sehtLinks {
