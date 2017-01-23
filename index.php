@@ -86,6 +86,11 @@
     </div>
 <!-- top bar -->
 
+<?php 
+    if($Url->whereAmI()=='post') {
+        $Page=$Post;
+    }
+?>
 
 
 <!-- navigation -->
@@ -104,7 +109,7 @@
                     } else {
                         $button='sehtButton';
                     }
-                    if ( $Parent->title() !='Start' ) {
+                    if ( substr( $Parent->description(),0,4 ) != 'hide' ) {
                         echo '<div style="float: left; margin: 0 0rem 0 0;">
                             <a class="'.$button.'" href="'.$Parent->permalink().'">
                                 <i class="'.$icon.'">
@@ -142,35 +147,39 @@
         <div class="maxWidth">
             <div class="sehtrand"> 
                 <?php
-                    // check if page has childs or is child
-                    if ( array_key_exists( $Page->key() , $pagesParents ) || $Page->parentKey() ) {
-                        // get children if Parent or siblings if child
-                        if ($Page->parentKey()) {
-                            $ParentKey = $Page->parentKey();
-                            $children = $pagesParents[$Page->parentKey()];
-                        } else {
-                            $ParentKey = $Page->key();
-                            $children = $pagesParents[$Page->key()];
-                        }
-                        foreach( $children as $Child ) {
-                            if ( substr( $Child->description(), 0, 3 ) == 'fa-' ) {
-                                $icon = 'fa '.$Child->description();
+                    if( $Url->whereAmI()=='page' && $Page->description() != 'hide' ) {
+                        // check if page has childs or is child
+                        if ( array_key_exists( $Page->key() , $pagesParents ) || $Page->parentKey() ) {
+                            // get children if Parent or siblings if child
+                            if ($Page->parentKey()) {
+                                $ParentKey = $Page->parentKey();
+                                $children = $pagesParents[$Page->parentKey()];
                             } else {
-                                $icon = '';
+                                $ParentKey = $Page->key();
+                                $children = $pagesParents[$Page->key()];
                             }
-                            if ( $Child->title() == $Page->title() ) {
-                                $button='sehtButton grau';
-                            } else {
-                                $button='sehtButton blau';
+                            foreach( $children as $Child ) {
+                                if ( substr( $Child->description(), 0, 3 ) == 'fa-' ) {
+                                    $icon = 'fa '.$Child->description();
+                                } else {
+                                    $icon = '';
+                                }
+                                if ( $Child->title() == $Page->title() ) {
+                                    $button='sehtButton grau';
+                                } else {
+                                    $button='sehtButton blau';
+                                }
+                                if ( substr( $Child->description(),0,4 ) != 'hide' ) {
+                                    echo '
+                                        <div style="float: left; margin: 0 0rem 0 0;">
+                                            <a class="'.$button.'" href="'.$Child->permalink().'">
+                                                <i class="fa '.$icon.'">
+                                                </i>
+                                                '.$Child->title().'
+                                            </a>
+                                        </div>';
+                                }
                             }
-                            echo '
-                                <div style="float: left; margin: 0 0rem 0 0;">
-                                    <a class="'.$button.'" href="'.$Child->permalink().'">
-                                        <i class="fa '.$icon.'">
-                                        </i>
-                                        '.$Child->title().'
-                                    </a>
-                                </div>';
                         }
                     }
                 ?>
