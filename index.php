@@ -83,7 +83,7 @@
                 <img id="fontIcon" src="<?php echo HTML_PATH_THEME.'img/tT.svg' ?>" style="height: 3rem;" alt="font icon">
             </div>
             <div style="float: left; padding: 0 0.6rem 1.5rem 0.6rem;">
-                    <a href="/" style="text-decoration: none;">
+                    <a href="<?php echo HTML_PATH_ROOT; ?>" style="text-decoration: none;">
                         <img src="<?php echo HTML_PATH_THEME.'img/LOGO.svg' ?>" style="width: auto; height: 3rem;" alt="Logo SeHT Münster e.V.">
                     </a>
             </div>
