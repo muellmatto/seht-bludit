@@ -25,10 +25,10 @@
                 lies = text[0].textContent;
                 responsiveVoice.speak(lies, "Deutsch Female",{
                     onstart: function(){
-                        document.getElementById('speechIcon').src = "img/schweig.svg";
+                        document.getElementById('speechIcon').src = document.getElementById('speechIcon').src.replace('sprich.svg', 'schweig.svg');
                     },
                     onend: function(){
-                        document.getElementById('speechIcon').src = "img/sprich.svg";
+                        document.getElementById('speechIcon').src = document.getElementById('speechIcon').src.replace('schweig.svg', 'sprich.svg');
                     }
                 });
                 
@@ -51,12 +51,13 @@
             function toggleFont() {
                 var LISTE = document.getElementsByTagName("inhalt")[0].getElementsByTagName("*");
                 // text = document.getElementsByTagName("inhalt")[0];
-                if ( document.getElementById('fontIcon').src.endsWith("img/tT.svg") ) {
-                    document.getElementById('fontIcon').src = "img/Tt.svg";
+                tTpath=document.getElementById('fontIcon').src;
+                if ( tTpath.endsWith("img/tT.svg") ) {
+                    document.getElementById('fontIcon').src = tTpath.replace('tT.svg', 'Tt.svg');
                     originalSize = document.getElementsByTagName("html")[0].style.fontSize;
                     document.getElementsByTagName("html")[0].style.fontSize = "1.76rem";
                 } else {
-                    document.getElementById('fontIcon').src = "img/tT.svg";
+                    document.getElementById('fontIcon').src = tTpath.replace('Tt.svg', 'tT.svg');
                     document.getElementsByTagName("html")[0].style.fontSize = originalSize;
                 }
             }
