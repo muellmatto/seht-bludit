@@ -9,12 +9,16 @@
         <?php echo $Site->title() ?>
     </title>
 
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo HTML_PATH_THEME_IMG.'favicon.ico' ?>">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo HTML_PATH_THEME_CSS.'normalize.css' ?>" \>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo HTML_PATH_THEME_CSS.'seht.css' ?>" \>
 
-    <script src="http://code.responsivevoice.org/responsivevoice.js">
+    <!-- script src="http://code.responsivevoice.org/responsivevoice.js">
+    </script -->
+
+    <script src="<?php echo HTML_PATH_THEME_JS.'responsivevoice.src.js' ?>">
     </script>
 
     <script type="text/javascript">
@@ -42,7 +46,7 @@
                 if ( !(responsiveVoice.isPlaying()) ) {
                     startSpeech();
                 } else {
-                    document.getElementById('speechIcon').src = "img/sprich.svg";
+                    document.getElementById('speechIcon').src = document.getElementById('speechIcon').src.replace('schweig.svg', 'sprich.svg');
                     stopSpeech();
                 }
             }
