@@ -77,10 +77,10 @@
     <div class="maxWidth">
         <div class="sehtrand" style="margin-top: 1rem;">
             <div style="float: right; padding: 0 0.6rem 0 0; " onclick="toggleSpeech()">
-                <img id="speechIcon" src="<?php echo HTML_PATH_THEME.'img/sprich.svg' ?>" style="width: auto; height: 3rem;" alt="speech icon">
+                <img id="speechIcon" src="<?php echo HTML_PATH_THEME.'img/sprich.svg' ?>" style="height: 3.2rem;" alt="speech icon" aria-hidden="true">
             </div>
             <div style="float: right; padding: 0 0.6rem 0 0;" onclick="toggleFont()">
-                <img id="fontIcon" src="<?php echo HTML_PATH_THEME.'img/tT.svg' ?>" style="width: auto; height: 3rem;" alt="font icon">
+                <img id="fontIcon" src="<?php echo HTML_PATH_THEME.'img/tT.svg' ?>" style="height: 3rem;" alt="font icon">
             </div>
             <div style="float: left; padding: 0 0.6rem 1.5rem 0.6rem;">
                     <a href="/" style="text-decoration: none;">
@@ -117,7 +117,7 @@
                     if ( substr( $Parent->description(),0,4 ) != 'hide' ) {
                         echo '<div style="float: left; margin: 0 0rem 0 0;">
                             <a class="'.$button.'" href="'.$Parent->permalink().'">
-                                <i class="'.$icon.'">
+                                <i class="'.$icon.'" aria-hidden="true">
                                 </i>
                                 '.$Parent->title().'
                             </a>
@@ -139,7 +139,7 @@
         }
         echo '
         <div class="desktop" style="background-color: grey; clear: left">
-            <img class="desktop" src="'.$imgsrc.'" alt="Cover Image" style="max-height: 25rem; display: block; margin: 0 auto;">
+            <img class="desktop" src="'.$imgsrc.'" alt="Cover Image" style="max-height: 25rem; display: block; margin: 0 auto;" aria-hidden="true">
         </div>';
     ?>
 <!-- image // banner end -->
@@ -178,7 +178,7 @@
                                     echo '
                                         <div style="float: left; margin: 0 0rem 0 0;">
                                             <a class="'.$button.'" href="'.$Child->permalink().'">
-                                                <i class="fa '.$icon.'">
+                                                <i class="fa '.$icon.'" aria-hidden="true">
                                                 </i>
                                                 '.$Child->title().'
                                             </a>
@@ -212,8 +212,8 @@
                     Dechaneistr. 14<br>
                     48145 Münster
                     <hr>
-                    <i class="fa fa-mobile"></i> 0251/136920<br>
-                    <a href="mailto: info@seht-muenster.de" style="text-decoration: none;" target="_blank"><i class="fa fa-envelope-o"></i> info@seht-muenster.de</a>
+                    <i class="fa fa-mobile" aria-hidden="true"></i> 0251/136920<br>
+                    <a href="mailto: info@seht-muenster.de" style="text-decoration: none;" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i> info@seht-muenster.de</a>
                     <hr>
                 </p>
             </div>
@@ -226,7 +226,7 @@
 <div class="blau footer sehtHeight" style="overflow: auto; clear: left;">
     <div class="maxWidth">
         <div class="sehtrand"> 
-            Impressum <span style="color: rgb(188,188,188)">SeHT Münster e.V. (c) 2016</span>
+            Impressum <span style="color: rgb(188,188,188)">SeHT Münster e.V. <i class="fa fa-copyright" aria-hidden="true"></i>  2016</span>
         </div>
     </div>
 </div>
