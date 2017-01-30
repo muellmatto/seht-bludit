@@ -30,7 +30,9 @@ h5 {
 
 b, em {
     color: rgb(0,95,200);
+    /*
     font-style: normal;
+    */
 }
 
 .maxWidth {
