@@ -13,19 +13,17 @@ img {
 
 inhalt img {
     float: left;
+    margin: 1rem;
 }
 
 h1, h2, h3, h4, h5 {
     line-height: normal;
+    clear: left;
 }
 
 h2 {
     padding-top: 0;
     font-size: 1.88rem;
-}
-
-h5 {
-    clear: left;
 }
 
 b, em {
