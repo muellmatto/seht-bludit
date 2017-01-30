@@ -88,7 +88,7 @@ b, em {
     /*
     height: 35px;
     */
-    height: 2.19rem;
+    min-height: 2.19rem;
 }
 
 .bigFont {
