@@ -8,12 +8,20 @@ html, body {
 }
 
 img {
-    max-width: 100%
+    max-width: 100%;
+}
+
+inhalt img {
+    float: left;
 }
 
 h2 {
     padding-top: 0;
     font-size: 1.88rem;
+}
+
+h5 {
+    clear: left;
 }
 
 b, em {
@@ -65,27 +73,17 @@ b, em {
     color: white;
 }
 
+.gelb {
+    background: rgb(252, 239, 44);
+    color: rgb(35, 35, 35);
+}
+
 .sehtHeight {
     /*
     height: 35px;
     */
     height: 2.19rem;
 }
-
-
-
-.circle {
-    border-radius: 50%;
-    width: 2.6rem;
-    height: 2.6rem;
-    color: rgb(0,116,217);
-    line-height: 2.3rem; /* positioniert im Kreis*/
-    background: white;
-    float: right;
-    margin: 0.4rem;
-    border: 0.15rem solid rgb(0,116,217);
-}
-
 
 .bigFont {
     font-size: 3em;
