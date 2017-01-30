@@ -77,7 +77,7 @@
     <div class="maxWidth">
         <div class="sehtrand" style="margin-top: 1rem;">
             <div style="float: right; padding: 0 0.6rem 0 0; " onclick="toggleSpeech()">
-                <img id="speechIcon" src="<?php echo HTML_PATH_THEME.'img/sprich.svg' ?>" style="height: 3.2rem;" alt="speech icon" aria-hidden="true">
+                <img id="speechIcon" src="<?php echo HTML_PATH_THEME.'img/sprich.svg' ?>" style="height: 3rem;" alt="speech icon" aria-hidden="true">
             </div>
             <div style="float: right; padding: 0 0.6rem 0 0;" onclick="toggleFont()">
                 <img id="fontIcon" src="<?php echo HTML_PATH_THEME.'img/tT.svg' ?>" style="height: 3rem;" alt="font icon">
