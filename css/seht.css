@@ -15,6 +15,10 @@ inhalt img {
     float: left;
 }
 
+h1, h2, h3, h4, h5 {
+    line-height: normal;
+}
+
 h2 {
     padding-top: 0;
     font-size: 1.88rem;
