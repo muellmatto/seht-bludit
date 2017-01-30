@@ -33,6 +33,10 @@ b, em {
     */
 }
 
+iframe {
+    max-width: 100%;
+}
+
 .maxWidth {
     margin: auto;
     max-width: 77.69rem;
