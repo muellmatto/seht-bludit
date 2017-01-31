@@ -226,7 +226,7 @@
 <div class="blau footer sehtHeight" style="overflow: auto; clear: left;">
     <div class="maxWidth">
         <div class="sehtrand"> 
-            Impressum <span style="color: rgb(188,188,188)">SeHT Münster e.V. <i class="fa fa-copyright" aria-hidden="true"></i>  2016</span>
+            <a href="<?php echo $Site->url() ?>kontakt/impressum" style="text-decoration: none;"><b style="color: white;">Impressum</b></a>  <span style="color: rgb(188,188,188)">SeHT Münster e.V. <i class="fa fa-copyright" aria-hidden="true"></i>  2017</span>
         </div>
     </div>
 </div>
