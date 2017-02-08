@@ -138,9 +138,13 @@
             $imgsrc=HTML_PATH_THEME.'img/banner.png';
         }
         echo '
-        <div class="desktop" style="background-color: grey; clear: left">
-            <img class="desktop" src="'.$imgsrc.'" alt="Cover Image" style="max-height: 25rem; display: block; margin: 0 auto;" aria-hidden="true">
-        </div>';
+            <div class="maxWidth">
+                <div class="sehtrand">
+                    <div class="desktop" style="background-color: grey; clear: left">
+                        <img class="desktop" src="'.$imgsrc.'" alt="Cover Image" style="max-height: 25rem; display: block; margin: 0 auto;" aria-hidden="true">
+                    </div>
+                </div>
+            </div>';
     ?>
 <!-- image // banner end -->
 
@@ -148,9 +152,9 @@
     
     
 <!-- sub navigation -->
-    <div class="blau" style="overflow: auto; clear: left">
-        <div class="maxWidth">
-            <div class="sehtrand"> 
+    <div class="maxWidth">
+        <div class="sehtrand"> 
+            <div class="blau" style="overflow: auto; clear: left">
                 <?php
                     if( $Url->whereAmI()=='page' && $Page->description() != 'hide' ) {
                         // check if page has childs or is child
@@ -195,41 +199,48 @@
 
 
 <!-- content -->
-<div class="maxWidth" style="clear: both;">
-    <div class="sehtrand"> 
+    <div class="maxWidth" style="clear: both;">
+        <div class="sehtrand"> 
 
 
-            <div class="sehtLinks">
-                <inhalt>
-                    <?php echo $Page->content(); ?>
-                </inhalt>
-            </div>
-            <div class="sehtRechts">
-                <p style="margin-left: 1rem;">
-                    <hr>
-                    <em>SeHT Münster e.V.</em><br>
-                    - Alte Dechanei -<br>
-                    Dechaneistr. 14<br>
-                    48145 Münster
-                    <hr>
-                    <i class="fa fa-mobile" aria-hidden="true"></i> 0251/136920<br>
-                    <a href="mailto: info@seht-muenster.de" style="text-decoration: none;" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i> info@seht-muenster.de</a>
-                    <hr>
-                </p>
-            </div>
+                <div class="sehtLinks">
+                    <inhalt>
+                        <?php echo $Page->content(); ?>
+                    </inhalt>
+                </div>
+                <div class="sehtRechts">
+                    <p style="margin-left: 1rem;">
+                        <hr>
+                        <em>SeHT Münster e.V.</em><br>
+                        - Alte Dechanei -<br>
+                        Dechaneistr. 14<br>
+                        48145 Münster
+                        <hr>
+                        <i class="fa fa-mobile" aria-hidden="true"></i> 0251/136920<br>
+                        <a href="mailto: info@seht-muenster.de" style="text-decoration: none;" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i> info@seht-muenster.de</a>
+                        <hr>
+                    </p>
+                </div>
 
-    </div> <!-- margins -->
-</div>
+        </div> <!-- margins -->
+    </div>
 <!-- content end -->
 
 <!-- footer -->
-<div class="blau footer sehtHeight" style="overflow: auto; clear: left;">
-    <div class="maxWidth">
-        <div class="sehtrand"> 
-            <a href="<?php echo $Site->url() ?>kontakt/impressum" style="text-decoration: none;"><b style="color: white;">Impressum</b></a>  <span style="color: rgb(188,188,188)">SeHT Münster e.V. <i class="fa fa-copyright" aria-hidden="true"></i>  2017</span>
+    <div class="footer">
+        <div class="maxWidth">
+            <div class="sehtrand"> 
+                <div class="blau sehtHeight" style="overflow: auto; clear: left;">
+                    <div class="sehtrand"> 
+                        <a href="<?php echo $Site->url() ?>kontakt/impressum" style="text-decoration: none;"><b style="color: white;">Impressum</b></a>  <span style="color: rgb(188,188,188)">SeHT Münster e.V. <i class="fa fa-copyright" aria-hidden="true"></i>  2017</span>
+                        <a href="<?php echo $Site->url() ?>admin" class="desktop" style="float: right;">
+                            <i class="fa fa-key"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 <!-- footer end -->
 
 </body>
