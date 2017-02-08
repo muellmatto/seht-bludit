@@ -153,8 +153,12 @@ iframe {
 
     .sehtLinks {
         float: left;
-        width: calc(100% - 14rem);
+        width: calc(100% - 16rem);
         margin-bottom: 3rem;
+    }
+
+    .sehtrandLinks {
+       margin: 0 1rem 0 1rem; 
     }
 
     .footer {

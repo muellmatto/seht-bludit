@@ -203,11 +203,13 @@
         <div class="sehtrand"> 
 
 
-                <div class="sehtLinks">
+            <div class="sehtLinks">
+                <div class="sehtrandLinks"> 
                     <inhalt>
                         <?php echo $Page->content(); ?>
                     </inhalt>
                 </div>
+            </div>
                 <div class="sehtRechts">
                     <p style="margin-left: 1rem;">
                         <hr>
