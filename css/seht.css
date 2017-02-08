@@ -138,11 +138,6 @@ iframe {
     }
 }
 
-@media screen and (max-height: 100px) {
-    .desktop {
-        display: none;
-    }
-}
 
 /* desktop || large */
 @media screen and (min-width: 50rem) {
@@ -162,9 +157,6 @@ iframe {
         margin-bottom: 3rem;
     }
 
-    .sehtrandLinks {
-       margin: 0 0rem 0 0rem; 
-    }
 
     .footer {
         position: fixed;
