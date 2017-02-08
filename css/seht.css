@@ -14,6 +14,7 @@ img {
 inhalt img {
     float: left;
     margin: 1rem;
+    max-width: 23rem;
 }
 
 h1, h2, h3, h4, h5 {
