@@ -138,7 +138,7 @@
             $imgsrc=HTML_PATH_THEME.'img/banner.png';
         }
         echo '
-            <div class="desktop" style="background-color: grey; clear: left">
+            <div class="desktop grau" style="clear: left">
                 <div class="maxWidth">
                     <div class="sehtrand">
                         <img class="desktop" src="'.$imgsrc.'" alt="Cover Image" style="max-height: 21.3rem; display: block; margin: 0 auto;" aria-hidden="true">
