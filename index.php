@@ -141,7 +141,7 @@
             <div class="desktop" style="background-color: grey; clear: left">
                 <div class="maxWidth">
                     <div class="sehtrand">
-                        <img class="desktop" src="'.$imgsrc.'" alt="Cover Image" style="max-height: 25rem; display: block; margin: 0 auto;" aria-hidden="true">
+                        <img class="desktop" src="'.$imgsrc.'" alt="Cover Image" style="max-height: 21.3rem; display: block; margin: 0 auto;" aria-hidden="true">
                     </div>
                 </div>
             </div>';
