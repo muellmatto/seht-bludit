@@ -138,9 +138,9 @@
             $imgsrc=HTML_PATH_THEME.'img/banner.png';
         }
         echo '
-            <div class="maxWidth">
-                <div class="sehtrand">
-                    <div class="desktop" style="background-color: grey; clear: left">
+            <div class="desktop" style="background-color: grey; clear: left">
+                <div class="maxWidth">
+                    <div class="sehtrand">
                         <img class="desktop" src="'.$imgsrc.'" alt="Cover Image" style="max-height: 25rem; display: block; margin: 0 auto;" aria-hidden="true">
                     </div>
                 </div>
@@ -152,9 +152,9 @@
     
     
 <!-- sub navigation -->
-    <div class="maxWidth">
-        <div class="sehtrand"> 
-            <div class="blau" style="overflow: auto; clear: left">
+    <div class="blau" style="overflow: auto; clear: left">
+        <div class="maxWidth">
+            <div class="sehtrand"> 
                 <?php
                     if( $Url->whereAmI()=='page' && $Page->description() != 'hide' ) {
                         // check if page has childs or is child
@@ -230,9 +230,9 @@
 
 <!-- footer -->
     <div class="footer">
-        <div class="maxWidth">
-            <div class="sehtrand"> 
-                <div class="blau sehtHeight" style="overflow: auto; clear: left;">
+        <div class="blau sehtHeight" style="overflow: auto; clear: left;">
+            <div class="maxWidth">
+                <div class="sehtrand"> 
                     <div class="sehtrand"> 
                         <a href="<?php echo $Site->url() ?>kontakt/impressum" style="text-decoration: none;"><b style="color: white;">Impressum</b></a>  <span style="color: rgb(188,188,188)">SeHT Münster e.V. <i class="fa fa-copyright" aria-hidden="true"></i>  2017</span>
                         <a href="<?php echo $Site->url() ?>admin" class="desktop" style="float: right;">

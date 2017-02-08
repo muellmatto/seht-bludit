@@ -138,6 +138,11 @@ iframe {
     }
 }
 
+@media screen and (max-height: 100px) {
+    .desktop {
+        display: none;
+    }
+}
 
 /* desktop || large */
 @media screen and (min-width: 50rem) {
@@ -153,12 +158,12 @@ iframe {
 
     .sehtLinks {
         float: left;
-        width: calc(100% - 16rem);
+        width: calc(100% - 14rem);
         margin-bottom: 3rem;
     }
 
     .sehtrandLinks {
-       margin: 0 1rem 0 1rem; 
+       margin: 0 0rem 0 0rem; 
     }
 
     .footer {
