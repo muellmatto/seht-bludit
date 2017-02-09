@@ -161,13 +161,13 @@ iframe {
 
     .sehtRechts {
         float: right;
-        width: 12rem;
+        width: 12.5rem;
         margin-bottom: 3rem;
     }
 
     .sehtLinks {
         float: left;
-        width: calc(100% - 14rem);
+        width: calc(100% - 14.5rem);
         margin-bottom: 3rem;
     }
 
