@@ -39,6 +39,36 @@ iframe {
     max-width: 100%;
 }
 
+/*  Karten sind in wirklichkeit Tabellen! */
+    table {
+        border-color: rgb(155,155,155);
+        border-style: solid;
+        border-collapse: collapse; 
+        border-width: 0.1rem;
+        margin: 1.05rem;
+        float: left;
+    }
+    thead {
+        background: rgb(0,95,200);
+        color: white;
+        text-align: right;
+    }
+    th {
+        padding: 1rem;
+        line-height: 1.2rem;
+        font-size: 1rem;
+        font-weight: normal;
+    }
+    td {
+        padding: 0.6rem;
+    }
+    table img {
+        width: 30%;
+        float: left;
+        margin: 0.6rem 0.6rem 0rem 0rem;
+    }
+/* ------------------------------------------ */
+
 .maxWidth {
     margin: auto;
     max-width: 77.69rem;
@@ -111,30 +141,6 @@ iframe {
     font-size: 3em;
 }
 
-
-.card {
-    margin: 1.05rem;
-    float: left;
-    border-color: rgb(188,188,188);
-    border-style: solid;
-    border-width: thin;
-}
-
-.card > img {
-    width: 30%;
-    float: left;
-    margin: 0.6rem;
-}
-
-.card > p {
-    margin: 0 0.6rem;
-}
-
-.cardTitle {
-    padding: 1rem;
-    text-align: right;
-    line-height: 1.2rem;
-}
     
 .sehtRechts {
     margin-top: 2.45rem;
@@ -178,7 +184,7 @@ iframe {
         bottom: 0;
     }
 
-    .card {
+    table {
         width: calc(50% - 3.4rem);
     }
 }
