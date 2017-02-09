@@ -104,8 +104,16 @@
             <?php
                 $parents = $pagesParents[NO_PARENT_CHAR];
                 foreach($parents as $Parent) {
+                    /*
                     if ( substr( $Parent->description(), 0, 3 ) == 'fa-' ) {
                         $icon = 'fa '.$Parent->description();
+                    } else {
+                        $icon = '';
+                    }
+                    */
+                    if (strpos($Parent->description(), 'fa-') !== false ) {
+                        $faPos=strpos($Parent->description(), 'fa-');
+                        $icon = substr( $Parent->description(), $faPos);
                     } else {
                         $icon = '';
                     }
@@ -114,7 +122,7 @@
                     } else {
                         $button='sehtButton';
                     }
-                    if ( substr( $Parent->description(),0,4 ) != 'hide' ) {
+                    if (strpos($Parent->description(), 'hide') === false ) {
                         echo '<div style="float: left; margin: 0 0rem 0 0;">
                             <a class="'.$button.'" href="'.$Parent->permalink().'">
                                 <i class="'.$icon.'" aria-hidden="true">
@@ -137,11 +145,18 @@
         } else {
             $imgsrc=HTML_PATH_THEME.'img/banner.png';
         }
+        if (strpos($Page->description(), 'top') !== false ) {
+            $bannerStyle='object-position: top;';
+        } elseif (strpos($Page->description(), 'bottom') !== false ) {
+            $bannerStyle='object-position: bottom;';
+        } else {
+            $bannerStyle='object-position: center;';
+        }
         echo '
             <div class="desktop grau" style="clear: left">
                 <div class="maxWidth">
                     <div class="sehtrand">
-                        <img class="desktop" src="'.$imgsrc.'" alt="Cover Image" style="max-height: 21.3rem; display: block; margin: 0 auto;" aria-hidden="true">
+                        <img class="desktop banner" src="'.$imgsrc.'" style="'.$bannerStyle.'" alt="Cover Image" aria-hidden="true">
                     </div>
                 </div>
             </div>';
@@ -178,7 +193,7 @@
                                 } else {
                                     $button='sehtButton blau';
                                 }
-                                if ( substr( $Child->description(),0,4 ) != 'hide' ) {
+                                if (strpos($Child->description(), 'hide') === false ) {
                                     echo '
                                         <div style="float: left; margin: 0 0rem 0 0;">
                                             <a class="'.$button.'" href="'.$Child->permalink().'">
