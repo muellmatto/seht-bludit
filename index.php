@@ -111,9 +111,15 @@
                         $icon = '';
                     }
                     */
-                    if (strpos($Parent->description(), 'fa-') !== false ) {
-                        $faPos=strpos($Parent->description(), 'fa-');
-                        $icon = substr( $Parent->description(), $faPos);
+                    $meta=$Parent->description();
+                    if (strpos($meta, 'fa-') !== false ) {
+                        $faStartPos=strpos($meta, 'fa-');
+                        if (strpos($meta, ' ', $faStartPos) !== false ) {
+                            $faEndPos=strpos($meta, ' ', $faStartPos);
+                            $icon = 'fa '.substr( $meta, $faStartPos, $faEndPos-$faStartPos);
+                        } else {
+                            $icon = 'fa '.substr( $meta, $faStartPos);
+                        }
                     } else {
                         $icon = '';
                     }
@@ -122,7 +128,7 @@
                     } else {
                         $button='sehtButton';
                     }
-                    if (strpos($Parent->description(), 'hide') === false ) {
+                    if (strpos($meta, 'hide') === false ) {
                         echo '<div style="float: left; margin: 0 0rem 0 0;">
                             <a class="'.$button.'" href="'.$Parent->permalink().'">
                                 <i class="'.$icon.'" aria-hidden="true">
@@ -183,8 +189,15 @@
                                 $children = $pagesParents[$Page->key()];
                             }
                             foreach( $children as $Child ) {
-                                if ( substr( $Child->description(), 0, 3 ) == 'fa-' ) {
-                                    $icon = 'fa '.$Child->description();
+                                $meta=$Child->description();
+                                if (strpos($meta, 'fa-') !== false ) {
+                                    $faStartPos=strpos($meta, 'fa-');
+                                    if (strpos($meta, ' ', $faStartPos) !== false ) {
+                                        $faEndPos=strpos($meta, ' ', $faStartPos);
+                                        $icon = 'fa '.substr( $meta, $faStartPos, $faEndPos-$faStartPos);
+                                    } else {
+                                        $icon = 'fa '.substr( $meta, $faStartPos);
+                                    }
                                 } else {
                                     $icon = '';
                                 }
@@ -193,11 +206,11 @@
                                 } else {
                                     $button='sehtButton blau';
                                 }
-                                if (strpos($Child->description(), 'hide') === false ) {
+                                if (strpos($meta, 'hide') === false ) {
                                     echo '
                                         <div style="float: left; margin: 0 0rem 0 0;">
                                             <a class="'.$button.'" href="'.$Child->permalink().'">
-                                                <i class="fa '.$icon.'" aria-hidden="true">
+                                                <i class="'.$icon.'" aria-hidden="true">
                                                 </i>
                                                 '.$Child->title().'
                                             </a>
