@@ -47,7 +47,7 @@ iframe {
         border-width: 0.1rem;
         margin: 1.05rem;
         float: left;
-        min-height: 22rem;
+        min-height: 16rem;
     }
     thead {
         background: rgb(0,95,200);

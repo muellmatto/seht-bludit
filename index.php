@@ -148,24 +148,22 @@
     <?php
         if($Page->coverImage()) {
             $imgsrc=$Page->coverImage();
-        } else {
-            $imgsrc=HTML_PATH_THEME.'img/banner.png';
-        }
-        if (strpos($Page->description(), 'top') !== false ) {
-            $bannerStyle='object-position: top;';
-        } elseif (strpos($Page->description(), 'bottom') !== false ) {
-            $bannerStyle='object-position: bottom;';
-        } else {
-            $bannerStyle='object-position: center;';
-        }
-        echo '
-            <div class="desktop grau" style="clear: left">
-                <div class="maxWidth">
-                    <div class="sehtrand">
-                        <img class="desktop banner" src="'.$imgsrc.'" style="'.$bannerStyle.'" alt="Cover Image" aria-hidden="true">
+            if (strpos($Page->description(), 'top') !== false ) {
+                $bannerStyle='object-position: top;';
+            } elseif (strpos($Page->description(), 'bottom') !== false ) {
+                $bannerStyle='object-position: bottom;';
+            } else {
+                $bannerStyle='object-position: center;';
+            }
+            echo '
+                <div class="desktop grau" style="clear: left">
+                    <div class="maxWidth">
+                        <div class="sehtrand">
+                            <img class="desktop banner" src="'.$imgsrc.'" style="'.$bannerStyle.'" alt="Cover Image" aria-hidden="true">
+                        </div>
                     </div>
-                </div>
-            </div>';
+                </div>';
+            }
     ?>
 <!-- image // banner end -->
 
