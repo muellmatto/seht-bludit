@@ -258,7 +258,7 @@
             <div class="maxWidth">
                 <div class="sehtrand" style="line-height: 2rem;"> 
                         <a href="<?php echo $Site->url() ?>kontakt/impressum" style="text-decoration: none;"><b style="color: white;">Impressum</b></a>  <span style="color: rgb(188,188,188)">SeHT Münster e.V. <i class="fa fa-copyright" aria-hidden="true"></i>  2017</span>
-                        <a href="<?php echo $Site->url() ?>admin" class="desktop" style="float: right;">
+                        <a style="color: black;" href="<?php echo $Site->url() ?>admin" class="desktop" style="float: right;">
                             <i class="fa fa-key"></i>
                         </a>
                 </div>
