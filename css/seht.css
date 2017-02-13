@@ -64,6 +64,9 @@ iframe {
         font-size: 1rem;
         font-weight: normal;
     }
+    th a {
+        color: white;
+    }
     td {
         padding: 0 0.6rem;
         line-height: 2.5rem;
