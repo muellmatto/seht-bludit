@@ -15,11 +15,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo HTML_PATH_THEME_CSS.'seht.css' ?>" \>
 
-    <!-- script src="http://code.responsivevoice.org/responsivevoice.js">
-    </script -->
-
-    <script src="<?php echo HTML_PATH_THEME_JS.'responsivevoice.src.js' ?>">
-    </script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
 
     <script type="text/javascript">
 
