@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="de">
+<?php
+    $count_my_page = ("hitcounter.txt");
+    $hits = file($count_my_page);
+    $hits[0] ++;
+    $fp = fopen($count_my_page , "w");
+    fputs($fp , "$hits[0]");
+    fclose($fp);
+?>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="google-site-verification" content="PZJ3Lkm5RLS7fHXO2SlmhgbbyqLKqPPSHIhrFl9Vm7s" />
     <title>
         <?php echo $Site->title() ?>
     </title>
@@ -219,6 +227,33 @@
     </div>
 <!-- sub navigation end -->
 
+    <?php
+        /**
+         * Send debug code to the Javascript console
+         */ 
+        function debug_to_console($data) {
+            if(is_array($data) || is_object($data))
+            {
+                echo("<script>console.log('PHP: ".json_encode($data)."');</script>");
+            } else {
+                echo("<script>console.log('PHP: ".$data."');</script>");
+            }
+        }
+        // diffretn contact details on specific sites
+        if ($Page->parentKey()) {
+            $KEY = $Page->parentKey();
+        } else {
+            $KEY = $Page->key();
+        }
+        if ($KEY == 'ambulanter-dienst') {
+            $Zustellanweisung = 'Ambulanter Dienst<br>';
+            $TEL = '0251/136921';
+        } else {
+            $Zustellanweisung = '';
+            $TEL = '0251/136920';
+        }
+        //debug_to_console($KEY);
+    ?>
 
 <!-- content -->
     <div class="maxWidth" style="clear: both;">
@@ -234,12 +269,20 @@
                     <p style="margin-left: 1rem;">
                         <hr>
                         <em>SeHT Münster e.V.</em><br>
+                        <?php echo $Zustellanweisung; ?>
                         - Alte Dechanei -<br>
                         Dechaneistr. 14<br>
                         48145 Münster
                         <hr>
-                        <i class="fa fa-mobile" aria-hidden="true"></i> 0251/136920<br>
-                        <a href="mailto: info@seht-muenster.de" style="text-decoration: none;" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i> info@seht-muenster.de</a>
+                        <a href="<?php echo $TEL; ?>" style="text-decoration: none;">
+                            <i class="fa fa-mobile" aria-hidden="true"></i> 
+                            <?php echo $TEL; ?>
+                        </a>
+                        <br>
+                        <a href="mailto: info@seht-muenster.de" style="text-decoration: none;" target="_blank">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            info@seht-muenster.de
+                        </a>
                         <hr>
                     </p>
                 </div>
