@@ -274,7 +274,7 @@
                         Dechaneistr. 14<br>
                         48145 Münster
                         <hr>
-                        <a href="<?php echo $TEL; ?>" style="text-decoration: none;">
+                        <a href="tel:<?php echo $TEL; ?>" style="text-decoration: none;">
                             <i class="fa fa-mobile" aria-hidden="true"></i> 
                             <?php echo $TEL; ?>
                         </a>
