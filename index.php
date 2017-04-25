@@ -248,9 +248,11 @@
         if ($KEY == 'ambulanter-dienst') {
             $Zustellanweisung = 'Ambulanter Dienst<br>';
             $TEL = '0251/136921';
+            $EMAIL = 'ambulante-dienste@seht-muenster.de';
         } else {
             $Zustellanweisung = '';
             $TEL = '0251/136920';
+            $EMAIL = 'info@seht-muenster.de';
         }
         //debug_to_console($KEY);
     ?>
@@ -281,7 +283,7 @@
                         <br>
                         <a href="mailto: info@seht-muenster.de" style="text-decoration: none;" target="_blank">
                             <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                            info@seht-muenster.de
+                            <?php echo $EMAIL; ?>
                         </a>
                         <hr>
                     </p>
