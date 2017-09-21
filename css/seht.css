@@ -21,6 +21,10 @@ a {
     color: rgb(0,95,200);
 }
 
+hr {
+    clear: left;
+}
+
 h1, h2, h3, h4, h5 {
     line-height: normal;
     clear: left;
@@ -41,6 +45,11 @@ b, em {
 
 iframe {
     max-width: 100%;
+}
+object {
+    float: left;
+    height: 50rem;
+    max-height: 75vh;
 }
 
 /*  Karten sind in wirklichkeit Tabellen! */
@@ -77,14 +86,15 @@ iframe {
         margin: 0.6rem 0.6rem 0rem 0rem;
     }
     @media screen and (max-width: 60rem) {
-        table {
+        object, table {
             width: 100%;
             margin: 1rem auto;
         }
     }
     @media screen and (min-width: 60rem) {
-        table {
+        object, table {
             width: calc(50% - 3.4rem);
+            margin: 1.7rem;
         }
     }
 /* ------------------------------------------ */
