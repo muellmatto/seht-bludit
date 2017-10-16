@@ -86,9 +86,9 @@
             <div style="float: right; padding: 0 0.6rem 0 0;" onclick="toggleFont()">
                 <img id="fontIcon" src="<?php echo HTML_PATH_THEME.'img/tT.svg' ?>" style="height: 3rem;" alt="font icon">
             </div>
-            <div style="float: left; padding: 0 0.6rem 1.5rem 0.6rem;">
+            <div style="float: left; padding: 0 0.6rem 0.05rem 0.6rem;">
                     <a href="<?php echo HTML_PATH_ROOT; ?>" style="text-decoration: none;">
-                        <img src="<?php echo HTML_PATH_THEME.'img/LOGO.svg' ?>" style="width: auto; height: 3rem;" alt="Logo SeHT Münster e.V.">
+                        <img src="<?php echo HTML_PATH_THEME.'img/seht_logo.png' ?>" style="width: auto; max-height: 4.42rem;" alt="Logo SeHT Münster e.V.">
                     </a>
             </div>
         </div> 
