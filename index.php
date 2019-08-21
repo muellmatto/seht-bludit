@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <?php
+    ini_set('session.use_cookies', '0');
     $count_my_page = ("hitcounter.txt");
     $hits = file($count_my_page);
     $hits[0] ++;
@@ -18,9 +19,12 @@
     </title>
 
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo HTML_PATH_THEME_IMG.'favicon.ico' ?>">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo HTML_PATH_THEME_CSS.'normalize.css' ?>" \>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo HTML_PATH_THEME_CSS.'font-awesome.min.css' ?>" \>
+    <?php
+    // <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    // <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    ?>
     <link rel="stylesheet" href="<?php echo HTML_PATH_THEME_CSS.'seht.css' ?>" \>
 
     <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
@@ -298,7 +302,9 @@
         <div class="blau sehtHeight" style="overflow: auto; clear: left;">
             <div class="maxWidth">
                 <div class="sehtrand" style="line-height: 2rem;"> 
-                        <a href="<?php echo $Site->url() ?>kontakt/impressum" style="text-decoration: none;"><b style="color: white;">Impressum</b></a>  <span style="color: rgb(188,188,188)">SeHT Münster e.V. <i class="fa fa-copyright" aria-hidden="true"></i>  2017</span>
+                        <a href="<?php echo $Site->url() ?>kontakt/datenschutz" style="text-decoration: none;"><b style="color: white;">Datenschutz</b></a> / 
+                        <a href="<?php echo $Site->url() ?>kontakt/impressum" style="text-decoration: none;"><b style="color: white;">Impressum</b></a>
+                        <span style="color: rgb(188,188,188)"><?php echo $Site->footer() ?></span>
                         <a style="color: black; float: right;" href="<?php echo $Site->url() ?>admin" class="desktop" style="float: right;">
                             <i class="fa fa-key"></i>
                         </a>
